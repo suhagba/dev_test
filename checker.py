@@ -6,4 +6,3 @@ def check_website_text(url, text):
     """
     resp = requests.get(url)
     return text in resp.text 
-

@@ -15,6 +15,9 @@ eg.
 import numpy as np
 
 
+# set up a random seed value
+np.random.seed(0)
+
 def get_noisy_values():
     signal = np.array([1, 2, 3, 4, 5])
     noise = np.random.random(5)
@@ -22,6 +25,6 @@ def get_noisy_values():
 
 def test_get_noisy_values():
     values = get_noisy_values()
-    expected = np.array([1, 2, 3, 4, 5])
+    expected = np.array([[1.5488135,2.71518937,3.60276338,4.54488318,5.4236548]])
     # This will fail most of the time.
-    assert (values == expected).all()
+    assert (values.round(2) == expected.round(2)).all()

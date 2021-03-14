@@ -27,3 +27,6 @@ def merge_dicts(src: dict, dest: dict):
 
 def test_merge_dicts():
     """Your code here"""
+    dict1 = {'a': 10, 'b': 8}
+    dict2 = {'d': 6, 'c': 4}
+    assert merge_dicts(dict1,dict2) == {'a': 10, 'b': 8, 'c': 4, 'd': 6}

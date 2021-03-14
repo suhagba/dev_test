@@ -17,7 +17,6 @@ infect_matrix = np.array([
 # Compartments of people (home, work, school).
 infectors = np.array([10.0, 19.0, 35.0]) # people who can infect other people
 
-# added the .0 to make all the values float 
 
 infected = infect_matrix.dot(infectors) # number of people who got infected
 
