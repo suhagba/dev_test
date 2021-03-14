@@ -15,14 +15,11 @@ infect_matrix = np.array([
 ])
 
 # Compartments of people (home, work, school).
-infectors = np.array([10, 19, 35]) # people who can infect other people
+infectors = np.array([10.0, 19.0, 35.0]) # people who can infect other people
 
-infected = np.zeros_like(infectors) # number of people who got infected
+# added the .0 to make all the values float 
 
-for infectee_idx in range(3):
-    for infector_idx in range(3):
-        infect_factor = infect_matrix[infector_idx, infectee_idx]
-        num_infectors = infectors[infector_idx]
-        infected[infectee_idx] += infect_factor * num_infectors
+infected = infect_matrix.dot(infectors) # number of people who got infected
+
 
 print("Number of people infected (home, work, school):", infected)

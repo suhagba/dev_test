@@ -15,10 +15,11 @@ ITEMS = list(range(30000))
 
 with Timer("Calculating sum of normalized items"):
     norm_items = []
+    max_item = max(ITEMS)  # need to calculate the max only once
     for i in ITEMS:
-        max_item = max(ITEMS)
         norm_item = i / max_item
         norm_items.append(norm_item)
-        sum_norm = sum(norm_items)
+    # need to calculate the sum_norm once after all the items are appended
+    sum_norm = sum(norm_items)
 
 print("The sum of norm items is", sum_norm)
