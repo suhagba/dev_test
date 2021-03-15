@@ -50,7 +50,7 @@ Destination bucket: s3://mydest
 
 ### Answer
 
-we can use sync which will recursivey copy 
+we can use sync which will recursively copy 
 ```bash
 aws s3 sync s3://mysource s3://mydest
 ```
